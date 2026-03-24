@@ -9,6 +9,7 @@ import { useDecisionModal, useModals } from '@gitroom/frontend/components/layout
 import { MediaBox } from '@gitroom/frontend/components/media/media.component';
 import copy from 'copy-to-clipboard';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { APP_NAME, APP_DOCS_URL } from '@gitroom/react-shared-libraries/branding';
 
 const useOAuthApp = () => {
   const fetch = useFetch();
@@ -195,12 +196,12 @@ export const DeveloperComponent: FC = () => {
           <div className="text-customColor18 mt-[4px]">
             {t(
               'create_an_oauth_application',
-              'Create an OAuth application to allow third-party integrations with Postiz on behalf of your users.'
+              `Create an OAuth application to allow third-party integrations with ${APP_NAME} on behalf of your users.`
             )}
             <br />
             <a
               className="underline hover:font-bold hover:underline"
-              href="https://docs.postiz.com/public-api/oauth"
+              href={`${APP_DOCS_URL}/public-api/oauth`}
               target="_blank"
             >
               {t(
@@ -313,7 +314,7 @@ export const DeveloperComponent: FC = () => {
           <br />
           <a
             className="underline hover:font-bold hover:underline"
-            href="https://docs.postiz.com/public-api/oauth"
+            href={`${APP_DOCS_URL}/public-api/oauth`}
             target="_blank"
           >
             {t(

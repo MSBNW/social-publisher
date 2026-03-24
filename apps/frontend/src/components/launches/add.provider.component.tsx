@@ -18,6 +18,7 @@ import { web3List } from '@gitroom/frontend/components/launches/web3/web3.list';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import clsx from 'clsx';
 import copy from 'copy-to-clipboard';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 import { capitalize } from 'lodash';
 const resolver = classValidatorResolver(ApiKeyDto);
 
@@ -259,7 +260,7 @@ const ExtensionNotFound: FC = () => {
       <p className="text-[14px] text-textColor/80">
         {t(
           'extension_not_available',
-          'The Postiz browser extension is not installed. You need to install it before connecting this channel.'
+          `The ${APP_NAME} browser extension is not installed. You need to install it before connecting this channel.`
         )}
       </p>
       <div className="flex gap-[10px]">
@@ -325,7 +326,7 @@ const ChromeExtensionWarning: FC<{
           We will store your cookies securely to facilitate the connection.
         </li>
         <li>
-          Postiz does not take responsibility for any issues arising or account termination due to the use of this method.
+          {APP_NAME} does not take responsibility for any issues arising or account termination due to the use of this method.
         </li>
       </ul>
       <div className="flex gap-[10px] mt-[8px]">
@@ -520,7 +521,7 @@ export const AddProviderComponent: FC<{
             toaster.show(
               t(
                 'extension_not_installed',
-                'Postiz browser extension is not installed or not reachable.'
+                `${APP_NAME} browser extension is not installed or not reachable.`
               ),
               'warning'
             );

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import loadDynamic from 'next/dynamic';
 import { TestimonialComponent } from '@gitroom/frontend/components/auth/testimonial.component';
 import { LogoTextComponent } from '@gitroom/frontend/components/ui/logo-text.component';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 const ReturnUrlComponent = loadDynamic(() => import('./return.url.component'));
 export default async function AuthLayout({
   children,
@@ -29,7 +30,7 @@ export default async function AuthLayout({
           Over <span className="text-[42px] text-[#FC69FF]">20,000+</span>{' '}
           Entrepreneurs use
           <br />
-          Postiz To Grow Their Social Presence
+          {APP_NAME} To Grow Their Social Presence
         </div>
         <TestimonialComponent />
       </div>

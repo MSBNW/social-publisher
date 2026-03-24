@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/nextjs';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 
 export const initializeSentryBasic = (environment: string, dsn: string, extension: any) => {
   if (!dsn) {
@@ -24,7 +25,7 @@ export const initializeSentryBasic = (environment: string, dsn: string, extensio
         },
         contexts: {
           app: {
-            name: 'Postiz Frontend',
+            name: `${APP_NAME} Frontend`,
             version: process.env.NEXT_PUBLIC_APP_VERSION || '0.0.0',
           },
         },

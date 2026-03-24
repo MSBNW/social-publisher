@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { AddProviderComponent } from '@gitroom/frontend/components/launches/add.provider.component';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 import { useModals } from '@gitroom/frontend/components/layout/new-modal';
 
 interface OnboardingModalProps {
@@ -250,12 +251,12 @@ const OnboardingStep2: FC<{ onBack: () => void; onFinish: () => void }> = ({
     <div className="flex flex-col gap-[24px] flex-1">
       <div className="flex gap-[4px] flex-col text-center">
         <div className="text-[24px] font-semibold">
-          {t('watch_tutorial_title', 'Learn How to Use Postiz')}
+          {t('watch_tutorial_title', `Learn How to Use ${APP_NAME}`)}
         </div>
         <div className="text-[14px] text-customColor18">
           {t(
             'watch_tutorial_description',
-            'Watch this short video to learn how to get the most out of Postiz'
+            `Watch this short video to learn how to get the most out of ${APP_NAME}`
           )}
         </div>
       </div>
@@ -266,7 +267,7 @@ const OnboardingStep2: FC<{ onBack: () => void; onFinish: () => void }> = ({
           <iframe
             className="h-full aspect-video"
             src="https://www.youtube.com/embed/BdsCVvEYgHU?si=vvhaZJ8I5oXXvVJS?autoplay=1"
-            title="Postiz Tutorial"
+            title={`${APP_NAME} Tutorial`}
             allow="autoplay"
             allowFullScreen
           />

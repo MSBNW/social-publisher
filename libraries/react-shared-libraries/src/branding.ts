@@ -1,0 +1,9 @@
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'Postiz';
+export const APP_LOGO_URL = process.env.NEXT_PUBLIC_APP_LOGO_URL || '/postiz-logo.svg';
+export const APP_FAVICON_URL = process.env.NEXT_PUBLIC_APP_FAVICON_URL || '/favicon.ico';
+export const APP_ACCENT_COLOR = process.env.NEXT_PUBLIC_APP_ACCENT_COLOR || '#612AD5';
+export const APP_DESCRIPTION = process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'The ultimate social media scheduling tool';
+export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_FRONTEND_URL || '';
+export const APP_TERMS_URL = process.env.NEXT_PUBLIC_APP_TERMS_URL || 'https://postiz.com/terms';
+export const APP_PRIVACY_URL = process.env.NEXT_PUBLIC_APP_PRIVACY_URL || 'https://postiz.com/privacy';
+export const APP_DOCS_URL = process.env.NEXT_PUBLIC_APP_DOCS_URL || 'https://docs.postiz.com';

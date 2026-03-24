@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 
 export const metadata: Metadata = {
-  title: 'Postiz - Agent',
+  title: `${APP_NAME} - Agent`,
   description: '',
 };
 

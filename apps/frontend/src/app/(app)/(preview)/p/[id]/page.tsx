@@ -11,6 +11,7 @@ import { VideoOrImage } from '@gitroom/react/helpers/video.or.image';
 import { CopyClient } from '@gitroom/frontend/components/preview/copy.client';
 import { getT } from '@gitroom/react/translation/get.translation.service.backend';
 import dynamicLoad from 'next/dynamic';
+import { APP_NAME, APP_LOGO_URL } from '@gitroom/react-shared-libraries/branding';
 
 const RenderPreviewDate = dynamicLoad(
   () =>
@@ -22,7 +23,7 @@ const RenderPreviewDate = dynamicLoad(
 
 dayjs.extend(utc);
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Preview`,
+  title: `${isGeneralServerSide() ? APP_NAME : 'Gitroom'} Preview`,
   description: '',
 };
 export default async function Auth({
@@ -58,7 +59,7 @@ export default async function Auth({
                 >
                   <div className="max-w-[55px]">
                     <Image
-                      src={'/postiz.svg'}
+                      src={APP_LOGO_URL}
                       width={55}
                       height={55}
                       alt="Logo"

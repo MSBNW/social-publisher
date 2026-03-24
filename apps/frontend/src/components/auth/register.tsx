@@ -23,6 +23,7 @@ import dynamic from 'next/dynamic';
 import { WalletUiProvider } from '@gitroom/frontend/components/auth/providers/placeholder/wallet.ui.provider';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import useCookie from 'react-use-cookie';
+import { APP_TERMS_URL, APP_PRIVACY_URL } from '@gitroom/react-shared-libraries/branding';
 const WalletProvider = dynamic(
   () => import('@gitroom/frontend/components/auth/providers/wallet.provider'),
   {
@@ -219,7 +220,7 @@ export function RegisterAfter({
                 )}
                 &nbsp;
                 <a
-                  href={`https://postiz.com/terms`}
+                  href={APP_TERMS_URL}
                   className="underline hover:font-bold"
                   rel="nofollow"
                 >
@@ -228,7 +229,7 @@ export function RegisterAfter({
                 &nbsp;
                 {t('and', 'and')}&nbsp;
                 <a
-                  href={`https://postiz.com/privacy`}
+                  href={APP_PRIVACY_URL}
                   rel="nofollow"
                   className="underline hover:font-bold"
                 >

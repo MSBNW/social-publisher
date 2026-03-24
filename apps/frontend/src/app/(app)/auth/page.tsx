@@ -6,8 +6,9 @@ import { isGeneralServerSide } from '@gitroom/helpers/utils/is.general.server.si
 import Link from 'next/link';
 import { getT } from '@gitroom/react/translation/get.translation.service.backend';
 import { LoginWithOidc } from '@gitroom/frontend/components/auth/login.with.oidc';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 export const metadata: Metadata = {
-  title: `${isGeneralServerSide() ? 'Postiz' : 'Gitroom'} Register`,
+  title: `${isGeneralServerSide() ? APP_NAME : 'Gitroom'} Register`,
   description: '',
 };
 export default async function Auth(params: {searchParams: {provider: string}}) {

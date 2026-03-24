@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { Agent } from '@gitroom/frontend/components/agents/agent';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 export const metadata: Metadata = {
-  title: 'Postiz - Agent',
+  title: `${APP_NAME} - Agent`,
   description: 'agents',
 };
 export default async function Layout({

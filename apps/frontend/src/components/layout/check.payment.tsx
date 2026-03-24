@@ -4,6 +4,7 @@ import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import { timer } from '@gitroom/helpers/utils/timer';
 import { useToaster } from '@gitroom/react/toaster/toaster';
 import { useDecisionModal } from '@gitroom/frontend/components/layout/new-modal';
+import { APP_ACCENT_COLOR } from '@gitroom/react-shared-libraries/branding';
 export const CheckPayment: FC<{
   check: string;
   mutate: () => void;
@@ -69,7 +70,7 @@ export const CheckPaymentInner: FC<{
     return (
       <div className="fixed bg-black/40 w-full h-full flex justify-center items-center z-[400]">
         <div>
-          <Loading type="spin" color="#612AD5" height={250} width={250} />
+          <Loading type="spin" color={APP_ACCENT_COLOR} height={250} width={250} />
         </div>
       </div>
     );

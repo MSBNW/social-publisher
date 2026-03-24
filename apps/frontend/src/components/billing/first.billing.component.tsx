@@ -27,6 +27,7 @@ import Image from 'next/image';
 import { useModals } from '@gitroom/frontend/components/layout/new-modal';
 import useCookie from 'react-use-cookie';
 import { LogoutComponent } from '@gitroom/frontend/components/layout/logout.component';
+import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
 
 const ModeComponent = dynamic(
   () => import('@gitroom/frontend/components/layout/mode.component'),
@@ -80,12 +81,12 @@ export const FirstBillingComponent = () => {
 
   const showYouTube = () => {
     modals.openModal({
-      title: 'Grow Fast With Postiz (Play the video)',
+      title: `Grow Fast With ${APP_NAME} (Play the video)`,
       children: (
         <iframe
           className="h-full aspect-video min-w-[800px]"
           src="https://www.youtube.com/embed/BdsCVvEYgHU?si=vvhaZJ8I5oXXvVJS?autoplay=1"
-          title="Postiz Tutorial"
+          title={`${APP_NAME} Tutorial`}
           allow="autoplay"
           allowFullScreen
         />
@@ -121,7 +122,7 @@ export const FirstBillingComponent = () => {
           {t('billing_who_use', 'who use')}{' '}
           {t(
             'billing_postiz_grow_social',
-            'Postiz To Grow Their Social Presence'
+            `${APP_NAME} To Grow Their Social Presence`
           )}
         </div>
 
@@ -136,7 +137,7 @@ export const FirstBillingComponent = () => {
                 alt="YouTube"
               />
             </div>
-            <div>See the power of Postiz (click here)</div>
+            <div>See the power of {APP_NAME} (click here)</div>
           </div>
         </div>
 
