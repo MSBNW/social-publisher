@@ -19,6 +19,11 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/login-action@v3
+        with:
+          registry: registry.fly.io
+          username: x
+          password: ${{ secrets.FLY_API_TOKEN }}
       - uses: docker/build-push-action@v5
         with:
           context: .
@@ -27,5 +32,6 @@ jobs:
           tags: |
             ghcr.io/msbnw/social-publisher:latest
             ghcr.io/msbnw/social-publisher:${{ github.sha }}
+            registry.fly.io/dreamcrew-social-publisher:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
