@@ -29,6 +29,15 @@ jobs:
           context: .
           file: ./Dockerfile.dev
           push: true
+          build-args: |
+            NEXT_PUBLIC_APP_NAME=SocialPublisher
+            NEXT_PUBLIC_APP_DESCRIPTION=AI-powered social media publishing
+            NEXT_PUBLIC_APP_ACCENT_COLOR=#3B82F6
+            NEXT_PUBLIC_APP_LOGO_URL=/branding/social-publisher-logo.png
+            NEXT_PUBLIC_APP_FAVICON_URL=/branding/social-publisher-favicon.png
+            NEXT_PUBLIC_APP_TERMS_URL=https://getsocialpublisher.com/terms
+            NEXT_PUBLIC_APP_PRIVACY_URL=https://getsocialpublisher.com/privacy
+            NEXT_PUBLIC_APP_DOCS_URL=https://docs.getsocialpublisher.com
           tags: |
             ghcr.io/msbnw/social-publisher:latest
             ghcr.io/msbnw/social-publisher:${{ github.sha }}
