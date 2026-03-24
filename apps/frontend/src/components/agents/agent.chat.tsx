@@ -33,7 +33,7 @@ import dayjs from 'dayjs';
 import { makeId } from '@gitroom/nestjs-libraries/services/make.is';
 import { ExistingDataContextProvider } from '@gitroom/frontend/components/launches/helpers/use.existing.data';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 
 export const AgentChat: FC = () => {
   const { backendUrl } = useVariables();

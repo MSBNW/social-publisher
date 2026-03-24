@@ -1,4 +1,4 @@
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 
 export const testimonials1 = [
   {

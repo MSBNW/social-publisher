@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import { Logo } from '@gitroom/frontend/components/new-layout/logo';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 
 export default function OAuthAuthorizePage() {
   const searchParams = useSearchParams();

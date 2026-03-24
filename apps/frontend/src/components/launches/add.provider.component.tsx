@@ -18,7 +18,7 @@ import { web3List } from '@gitroom/frontend/components/launches/web3/web3.list';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import clsx from 'clsx';
 import copy from 'copy-to-clipboard';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 import { capitalize } from 'lodash';
 const resolver = classValidatorResolver(ApiKeyDto);
 

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { useVariables } from '@gitroom/react/helpers/variable.context';
 import { useUser } from '@gitroom/frontend/components/layout/user.context';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 const useFaqList = () => {
   const { isGeneral } = useVariables();
   const user = useUser();

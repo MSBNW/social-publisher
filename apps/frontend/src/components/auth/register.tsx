@@ -23,7 +23,7 @@ import dynamic from 'next/dynamic';
 import { WalletUiProvider } from '@gitroom/frontend/components/auth/providers/placeholder/wallet.ui.provider';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import useCookie from 'react-use-cookie';
-import { APP_TERMS_URL, APP_PRIVACY_URL } from '@gitroom/react-shared-libraries/branding';
+import { APP_TERMS_URL, APP_PRIVACY_URL } from '@gitroom/react/branding';
 const WalletProvider = dynamic(
   () => import('@gitroom/frontend/components/auth/providers/wallet.provider'),
   {

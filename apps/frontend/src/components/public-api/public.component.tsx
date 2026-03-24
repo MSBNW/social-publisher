@@ -12,7 +12,7 @@ import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import { useDecisionModal } from '@gitroom/frontend/components/layout/new-modal';
 import { DeveloperComponent } from '@gitroom/frontend/components/developer/developer.component';
 import clsx from 'clsx';
-import { APP_NAME, APP_DOCS_URL } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME, APP_DOCS_URL } from '@gitroom/react/branding';
 
 const PublicApiContent = () => {
   const user = useUser();

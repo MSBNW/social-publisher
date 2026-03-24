@@ -11,7 +11,7 @@ import { VideoOrImage } from '@gitroom/react/helpers/video.or.image';
 import { CopyClient } from '@gitroom/frontend/components/preview/copy.client';
 import { getT } from '@gitroom/react/translation/get.translation.service.backend';
 import dynamicLoad from 'next/dynamic';
-import { APP_NAME, APP_LOGO_URL } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME, APP_LOGO_URL } from '@gitroom/react/branding';
 
 const RenderPreviewDate = dynamicLoad(
   () =>

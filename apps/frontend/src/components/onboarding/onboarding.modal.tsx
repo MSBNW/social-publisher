@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { AddProviderComponent } from '@gitroom/frontend/components/launches/add.provider.component';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 import { useModals } from '@gitroom/frontend/components/layout/new-modal';
 
 interface OnboardingModalProps {

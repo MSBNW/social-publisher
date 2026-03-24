@@ -4,7 +4,7 @@ import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import { timer } from '@gitroom/helpers/utils/timer';
 import { useToaster } from '@gitroom/react/toaster/toaster';
 import { useDecisionModal } from '@gitroom/frontend/components/layout/new-modal';
-import { APP_ACCENT_COLOR } from '@gitroom/react-shared-libraries/branding';
+import { APP_ACCENT_COLOR } from '@gitroom/react/branding';
 export const CheckPayment: FC<{
   check: string;
   mutate: () => void;

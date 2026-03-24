@@ -6,7 +6,7 @@ import { Logo } from '@gitroom/frontend/components/new-layout/logo';
 import { LogoutComponent } from '@gitroom/frontend/components/layout/logout.component';
 import React from 'react';
 import { OrganizationSelector } from '@gitroom/frontend/components/layout/organization.selector';
-import { APP_NAME } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME } from '@gitroom/react/branding';
 
 export const BillingAfter = () => {
   const user = useUser();

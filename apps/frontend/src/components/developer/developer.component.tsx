@@ -9,7 +9,7 @@ import { useDecisionModal, useModals } from '@gitroom/frontend/components/layout
 import { MediaBox } from '@gitroom/frontend/components/media/media.component';
 import copy from 'copy-to-clipboard';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
-import { APP_NAME, APP_DOCS_URL } from '@gitroom/react-shared-libraries/branding';
+import { APP_NAME, APP_DOCS_URL } from '@gitroom/react/branding';
 
 const useOAuthApp = () => {
   const fetch = useFetch();
