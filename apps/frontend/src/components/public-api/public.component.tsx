@@ -59,7 +59,7 @@ const PublicApiContent = () => {
         <h3 className="text-[20px]">{t('public_api', 'Public API')}</h3>
         <div className="text-customColor18 mt-[4px]">
           {t(
-            'use_postiz_api_to_integrate_with_your_tools',
+            'use_app_api_to_integrate_with_your_tools',
             `Use ${APP_NAME} API to integrate with your tools.`
           )}
           <br />
@@ -79,7 +79,7 @@ const PublicApiContent = () => {
             target="_blank"
           >
             <br />
-            {t('check_n8n', `Check out our N8N custom node for ${APP_NAME}.`)}
+            {t('check_n8n_custom_node', `Check out our N8N custom node for ${APP_NAME}.`)}
           </a>
         </div>
         <div className="flex flex-col">
@@ -118,7 +118,7 @@ const PublicApiContent = () => {
         <h3 className="text-[20px]">{t('mcp', 'MCP')}</h3>
         <div className="text-customColor18 mt-[4px]">
           {t(
-            'connect_your_mcp_client_to_postiz_to_schedule_your_posts_faster',
+            'connect_your_mcp_client_to_app_to_schedule_your_posts_faster',
             `Connect ${APP_NAME} MCP server to your client (Http streaming) to schedule your posts faster.`
           )}
         </div>
@@ -207,3 +207,4 @@ export const PublicComponent = () => {
     </div>
   );
 };
+

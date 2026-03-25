@@ -1,6 +1,22 @@
 'use client';
 
+import { APP_LOGO_URL, APP_NAME } from '@gitroom/react/branding';
+
 export const Logo = () => {
+  // Use custom logo from environment if configured
+  if (APP_LOGO_URL && APP_LOGO_URL !== '/postiz-logo.svg') {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={APP_LOGO_URL}
+        alt={APP_NAME}
+        width={60}
+        height={60}
+        className="mt-[8px] min-w-[60px] min-h-[60px] object-contain"
+      />
+    );
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
