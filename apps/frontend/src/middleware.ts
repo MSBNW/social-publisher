@@ -38,7 +38,8 @@ export async function middleware(request: NextRequest) {
   if (
     nextUrl.pathname.startsWith('/uploads/') ||
     nextUrl.pathname.startsWith('/p/') ||
-    nextUrl.pathname.startsWith('/icons/')
+    nextUrl.pathname.startsWith('/icons/') ||
+    nextUrl.pathname.startsWith('/branding/')
   ) {
     return topResponse;
   }
