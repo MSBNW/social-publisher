@@ -142,7 +142,7 @@ export async function middleware(request: NextRequest) {
     if (nextUrl.pathname === '/') {
       return NextResponse.redirect(
         new URL(
-          !!process.env.IS_GENERAL ? '/launches' : `/analytics`,
+          '/launches',  // Fork: always use /launches (SaaS-mode default)
           nextUrl.href
         )
       );

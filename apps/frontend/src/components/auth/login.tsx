@@ -69,27 +69,9 @@ export function Login() {
               {t('sign_in', 'Sign In')}
             </h1>
           </div>
-          {/* Third-party OAuth: only show when IS_GENERAL is set (SaaS mode).
-              Self-hosted mode (IS_GENERAL unset): email/password only — no GitHub/Google buttons.
-              This block is a fork customization; upstream shows GithubProvider for self-hosted. */}
-          {isGeneral && (
-            <>
-              <div className="text-[14px] mt-[32px] mb-[12px]">
-                {t('continue_with', 'Continue With')}
-              </div>
-              <div className="flex flex-col">
-                {genericOauth ? (
-                  <OauthProvider />
-                ) : (
-                  <div className="gap-[8px] flex">
-                    <GoogleProvider />
-                    {!!neynarClientId && <FarcasterProvider />}
-                    {billingEnabled && <WalletProvider />}
-                  </div>
-                )}
-              </div>
-            </>
-          )}
+          {/* Fork customization: hide all third-party OAuth buttons.
+              Our instance uses email/password auth only — no GitHub, Google, etc.
+              To re-enable, replace this block with upstream's OAuth provider logic. */}
           <div className="flex flex-col">
             <div className="h-[20px] mb-[24px] mt-[24px] relative">
               <div className="absolute w-full h-[1px] bg-fifth top-[50%] -translate-y-[50%]" />
